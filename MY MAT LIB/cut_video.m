@@ -17,7 +17,7 @@ for i =1:1
     FILENUM = size(FILES,1);
     for  j = START:FILENUM
         filename=FILES(j,1).name;
-        aviObj = mmreader([FILEDIR1, filename]);
+        aviObj = VideoReader([FILEDIR1, filename]);
         flag =['Now Processing: ', filename ]; disp(flag);
         vidObj = VideoWriter(['D:\STUDY\New Video\',filename]);
         open(vidObj);
